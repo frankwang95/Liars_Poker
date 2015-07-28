@@ -39,7 +39,6 @@ wordList = (open(wordListFile, 'r').read()).split()
 
 
 def send(conn, message):
-def send(conn, message):
 	n = connAttempts
 	while n != 0:
 		try:
@@ -342,6 +341,7 @@ class Client:
 		opp.result = False
 		return gameResult
 
+
 	def sendRequests(self):
 		package = str(map(lambda x: self.toHash(x.uid), self.server.players[self.uid][1]))
 		send(self.conn, package)
@@ -369,6 +369,7 @@ class Client:
 		self.conn.setblocking(1)
 		self.conn.settimeout(networkTimeout)
 		if status == '':
+			timePrint("Signing out UID " + str(self.uid))
 			return True
 		return False
 
@@ -381,6 +382,6 @@ class Client:
 		return (wordList.index(str) - self.uid)
 
 
-
+Server()
 ## TO DO
 # Alerts whe moving out of turn
