@@ -347,7 +347,6 @@ class Client:
 		send(self.conn, package)
 
 
-
 	def extract(self, uid):
 		for i in self.server.players[self.uid][1]:
 			if i.uid == uid:
@@ -383,5 +382,10 @@ class Client:
 
 
 Server()
+
 ## TO DO
 # Alerts whe moving out of turn
+# Refine login
+# Sanitize mySQL
+# Elo Rankings
+# Web interface
